@@ -1,0 +1,17 @@
+.color-black {
+    color: #636363 !important;
+}
+.profile-pic {
+    width: 43px;
+    border-radius: 100%;
+    margin: 12px;
+}
+.float-right {
+    float: right !important;
+}
+#contactsList {
+    border: none !important;
+}
+.m-10 {
+    margin: 10px !important;
+}

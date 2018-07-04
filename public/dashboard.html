@@ -1,0 +1,123 @@
+<!doctype html>
+
+<head>
+  <title>Contact List</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <nav style="background-color: white;" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo color-black">Dashboard</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <img class="profile-pic" id="profilePic" />
+        </li>
+        <li>
+          <button class="purple accent-4 btn" id="signOut">SIGN OUT</button>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li>
+          <button class="amber btn" id="signOut">SIGN OUT</button>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <h3 class="purple-text text-accent-4">Contacts</h3>
+        <a id="addContactBtn" href="#addContact" class="purple accent-4 btn-small float-right">
+          <i class="material-icons left">person_add</i>Add Contact</a>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="addContact" class="modal">
+        <div class="modal-content">
+          <h5 class="purple-text text-accent-4">Create New Contact</h5>
+          <br>
+          <br>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="John" id="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" placeholder="Doe" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Close</a>
+          <button id="submitBtn" class="waves-effect waves-purple btn-flat">Submit</button>
+        </div>
+      </div>
+
+      <!-- Modal Structure -->
+      <div id="editModal" class="modal">
+        <div class="modal-content">
+          <h5 class="purple-text text-accent-4">Edit Contact</h5>
+          <br>
+          <br>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="John" id="first_name_edit" type="text" class="validate">
+                  <label for="first_name_edit">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name_edit" type="text" placeholder="Doe" class="validate">
+                  <label for="last_name_edit">Last Name</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-purple btn-flat">Close</a>
+          <button id="submitEdit" class="waves-effect waves-purple btn-flat">Submit</button>
+        </div>
+      </div>
+
+      <div id="contactsList" class="row">
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="scripts/materialize.js"></script>
+  <!-- Firebase App is always required and must be first -->
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-functions.js"></script>
+  <script src="scripts/firebase.config.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/dashboard.js"></script>
+</body>
+
+</html>
